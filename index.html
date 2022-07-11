@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Web site created using for test task" />
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./header.css" />
+		<link rel="stylesheet" href="./input.css" />
+		<title>Home</title>
+	</head>
+	<body>
+		<!-- Main Section -->
+		<div class="main-screen">
+			<header class="main-screen-container">
+				<img alt="logo" src="./assets/Vector.svg" />
+
+				<div class="nav-container">
+					<nav>
+						<li>HOME</li>
+						<li>ABOUT</li>
+						<li>CONTACT</li>
+					</nav>
+					<div class="divider"></div>
+					<div class="contact-text">
+						CALL NOW FOR A CONSULT
+						<span class="marked-text">123.456.7890</span>
+					</div>
+				</div>
+				<div class="mobile-nav-container">
+					<input id="menu-toggle" type="checkbox" />
+					<label class="menu-button-container" for="menu-toggle">
+						<div class="menu-button"></div>
+					</label>
+					<nav class="menu">
+						<li>HOME</li>
+						<li>ABOUT</li>
+						<li>CONTACT</li>
+					</nav>
+				</div>
+			</header>
+			<main class="main-screen-container">
+				<div class="text-block">
+					<h1>
+						<span class="marked-h1">GET AN</span>
+						<br />
+						INTERVENTION
+					</h1>
+					<p>
+						Showing greater respect to older adults can be done in several ways :
+						<br />
+						acknowledging and putting to use the talents and skills of older adults; creating intergenerational
+						initiatives; and allowing older adults to stay active and independent for as long as possible.
+					</p>
+				</div>
+				<div class="form-block">
+					<h3>Contact Us</h3>
+					<form class="contact-us-form">
+						<div class="input-block">
+							<input type="text" name="input-text" id="input-text" required spellcheck="false" />
+							<span class="placeholder">First Name</span>
+						</div>
+						<div class="input-block">
+							<input type="text" name="input-text" id="input-text" required spellcheck="false" />
+							<span class="placeholder">Last Name</span>
+						</div>
+						<div class="input-block">
+							<input type="text" name="input-text" id="input-text" required spellcheck="false" />
+							<span class="placeholder">Business Email</span>
+						</div>
+						<div class="input-block">
+							<input type="text" name="input-text" id="input-text" required spellcheck="false" />
+							<span class="placeholder">Company</span>
+						</div>
+						<select>
+							<option value="" disabled selected hidden class="select-placeholder">Country</option>
+							<option value="">Bahrain</option>
+							<option value="">Pakistan</option>
+							<option value="">Palau</option>
+							<option value="">Romania</option>
+							<option value="">Saint Lucia</option>
+							<option value="">Samoa</option>
+						</select>
+						<button type="submit" class="primary-btn">
+							<img alt="" src="./assets/mdi_send.svg" />
+							Submit
+						</button>
+					</form>
+				</div>
+			</main>
+		</div>
+		<!-- Video Section -->
+		<div class="video-section-container">
+			<div class="video-text-background">
+				<div class="container">
+					<div class="video-text">
+						<h2>
+							<span class="marked-h1">WATCH</span>
+							THE VIDEO
+						</h2>
+						<ul>
+							<li>
+								<div class="video-li">Needs Assessment</div>
+								<p>
+									The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the
+									Consumer Voices for Coverage program.
+								</p>
+							</li>
+							<li>
+								<div class="video-li">Insurance Advocacy</div>
+								<p>We are committed to advocating for appropriate coverage and payment policies.</p>
+							</li>
+							<li>
+								<div class="video-li">Treatment Planning & Placement</div>
+								<p>Patients can better understand medical procedures, discharge instructions, etc.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="video-wrapper">
+				<button type="button" id="play"><img alt="play video" src="./assets/video-play.png" /></button>
+				<video playsinline muted loop poster="./assets/video-cover.png" class="video" id="video">
+					<source
+						src="https://mazwai.com/videvo_files/video/free/2016-01/small_watermarked/Forest_15_2_Videvo_preview.webm"
+						type="video/webm"
+					/>
+					Your browser does not support the video tag.
+				</video>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+</html>

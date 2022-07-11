@@ -1,0 +1,175 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 18px;
+	padding-bottom: 18px;
+}
+
+nav {
+	display: flex;
+}
+
+nav > li {
+	font-size: 14px;
+	line-height: 41px;
+	color: rgba(255, 255, 255, 0.7);
+	list-style-type: none;
+	margin-right: 31px;
+}
+
+nav > li:hover {
+	font-weight: 800;
+	color: #fff;
+	text-decoration: underline;
+}
+
+.divider {
+	height: 13px;
+	width: 1px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+}
+
+.mobile-nav-container {
+	display: none;
+}
+
+.contact-text {
+	font-weight: 800;
+	color: #fff;
+	margin-left: 46px;
+}
+
+.marked-text {
+	color: #5bc8af;
+}
+
+@media only screen and (max-width: 1100px) {
+	.divider {
+		display: none;
+	}
+
+	.nav-container {
+		display: grid;
+		align-items: center;
+		justify-items: flex-end;
+	}
+
+	nav > li {
+		margin-right: 0px;
+		margin-left: 29px;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.nav-container {
+		display: none;
+	}
+
+	.mobile-nav-container {
+		display: block;
+	}
+
+	/* burger */
+
+	.menu > li {
+		margin: 0 1rem;
+		overflow: hidden;
+	}
+
+	.menu-button-container {
+		display: none;
+		height: 100%;
+		width: 30px;
+		cursor: pointer;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#menu-toggle {
+		display: none;
+	}
+
+	.menu-button,
+	.menu-button::before,
+	.menu-button::after {
+		display: block;
+		background-color: #fff;
+		position: absolute;
+		height: 4px;
+		width: 30px;
+		transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+		border-radius: 2px;
+	}
+
+	.menu-button::before {
+		content: "";
+		margin-top: -8px;
+	}
+
+	.menu-button::after {
+		content: "";
+		margin-top: 8px;
+	}
+
+	#menu-toggle:checked + .menu-button-container .menu-button::before {
+		margin-top: 0px;
+		transform: rotate(405deg);
+	}
+
+	#menu-toggle:checked + .menu-button-container .menu-button {
+		background: rgba(255, 255, 255, 0);
+	}
+
+	#menu-toggle:checked + .menu-button-container .menu-button::after {
+		margin-top: 0px;
+		transform: rotate(-405deg);
+	}
+
+	.menu-button-container {
+		display: flex;
+	}
+	.menu {
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		position: absolute;
+		top: 18;
+		margin-top: 50px;
+		left: 0;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	#menu-toggle ~ .menu li {
+		height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	#menu-toggle:checked ~ .menu li {
+		border: 1px solid #2a7d6c;
+		height: 40px;
+		transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	.menu > li {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0.5em 0;
+		width: 100%;
+		color: #2a7d6c;
+		background-color: #ffffff;
+	}
+	.menu > li:not(:last-child) {
+		border-bottom: 1px solid #2a7d6c;
+	}
+}
