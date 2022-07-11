@@ -34,7 +34,7 @@ div.input-block span.placeholder {
 div.input-block input:valid + span.placeholder,
 div.input-block input:focus + span.placeholder {
 	transform: scale(0.8) translateY(-30px);
-	background: #2a7d6c;
+	background: #2f7a6a;
 	font-size: 13px;
 	line-height: 13px;
 }
@@ -44,6 +44,14 @@ div.input-block input:focus {
 }
 div.input-block input:focus + span.placeholder {
 	color: #fff;
+}
+
+div.input-block input:invalid {
+	border-color: #ff7777;
+}
+
+div.input-block input:invalid + span.placeholder {
+	color: #ff7777;
 }
 
 select {
